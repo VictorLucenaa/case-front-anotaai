@@ -1,0 +1,101 @@
+@import "../../../assets/styles/variables.scss";
+
+.cards-container {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  font-family: $font-default;
+
+  .card {
+    width: 190px;
+    height: 300px;
+    background-color: $background-card;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    position: relative;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+
+    .close-button {
+      height: 22px;
+      width: 22px;
+      fill: $greyText;
+      stroke: $greyText;
+      padding: 2px;
+      border: 1px solid $darkGrey;
+      background-color: $background-card;
+      border-radius: 100%;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.17) rotate(-90deg);
+        stroke: red;
+        fill: red;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .card-image {
+    width: 100%;
+    height: 45%;
+    border-radius: 6px 6px 0 0;
+    object-fit: cover;
+  }
+
+  .label {
+    position: absolute;
+    color: white;
+    border-radius: 4px;
+    padding: 1px 3px;
+    right: 3px;
+    top: 38%;
+    font-size: 10px;
+    font-weight: bold;
+
+    &.Paisagem {
+      background-color: $blueBackground;
+    }
+    &.Flor {
+      background-color: $redBackground;
+    }
+    &.Pizza {
+      background-color: $greenBackground;
+    }
+  }
+
+  .card-content {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+
+    .card-title {
+      margin-left: 6px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .card-description {
+      width: 100%;
+      height: 100%;
+      padding: 8px 13px;
+      font-size: 12px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

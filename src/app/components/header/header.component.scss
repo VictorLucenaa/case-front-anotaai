@@ -1,0 +1,76 @@
+@import "../../../assets/styles/variables.scss";
+
+.header-container {
+  height: 11vh;
+  display: flex;
+  padding: 5px 5px;
+  align-items: center;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: $background-card;
+  @media (min-width: 1400px) {
+    height: 9vh;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    @media (min-width: 1400px) {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .text-container {
+    font-family: $font-default;
+    padding: 0 5px;
+
+    &__title {
+      font-size: 1rem;
+      font-weight: 500;
+      @media (max-width: 600px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__subtitle {
+      color: $greyText;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.9rem;
+      font-style: italic;
+      @media (max-width: 600px) {
+        font-size: 0.7rem;
+        padding: 2px 0;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1rem;
+      }
+    }
+
+    &__subtitle::before {
+      content: "";
+      width: 0.5rem;
+      background-color: $darkGrey;
+      height: 1px;
+      @media (min-width: 1400px) {
+        width: 0.7rem;
+      }
+    }
+    &__subtitle::after {
+      content: "";
+      width: 1.5rem;
+      background-color: $darkGrey;
+      height: 1px;
+
+      @media (min-width: 1400px) {
+        width: 2.3rem;
+      }
+    }
+  }
+}

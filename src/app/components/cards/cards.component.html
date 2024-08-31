@@ -1,0 +1,30 @@
+<section class="cards-container">
+  @for (card of cards ; track card.id) {
+
+  <article class="card">
+    <button>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="close-button"
+        viewBox="0 0 512 512"
+      >
+        <title>Close</title>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="32"
+          d="M368 368L144 144M368 144L144 368"
+        />
+      </svg>
+    </button>
+    <img [src]="card.img" alt="card image" class="card-image" />
+    <div class="label" [class]="card.type | typeLabel">
+      <span>{{ card.type | typeLabel }}</span>
+    </div>
+    <div class="card-content">
+      <p class="card-title">{{ card.title }}</p>
+      <p class="card-description">{{ card.description }}</p>
+    </div>
+  </article>
+  }
+</section>

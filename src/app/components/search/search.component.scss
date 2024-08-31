@@ -1,0 +1,61 @@
+@import "../../../assets/styles/variables.scss";
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  font-family: $font-default;
+
+  input {
+    width: 47%;
+    height: 35px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid $darkGrey;
+    outline: none;
+    padding: 0.6rem;
+    @media (min-width: 1400px) {
+      width: 50%;
+      height: 40px;
+    }
+    @media (max-width: 600px) {
+      width: 60%;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    width: 35px;
+    height: 35px;
+    :hover {
+      cursor: pointer;
+    }
+    @media (min-width: 1400px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $darkGrey;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding: 8px;
+    background-color: white;
+  }
+
+  .focused {
+    border: 1.5px solid #59a5dd;
+  }
+
+  img.focused {
+    border-left: 0;
+  }
+
+  .label {
+    font-family: $font-default;
+  }
+}
