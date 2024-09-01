@@ -8,3 +8,8 @@ $redBackground: #fc004f;
 $greenBackground: #938b04;
 
 $font-default: "Roboto";
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+}

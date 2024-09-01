@@ -5,16 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class TypeLabelPipe implements PipeTransform {
+  private readonly typeMap: { [key: string]: string } = {
+    '1': 'Paisagem',
+    '2': 'Flor',
+    '3': 'Pizza',
+  };
+
   transform(value: string): string {
-    switch (value) {
-      case '1':
-        return 'Paisagem';
-      case '2':
-        return 'Flor';
-      case '3':
-        return 'Pizza';
-      default:
-        return 'Tipo inválido!';
-    }
+    return this.typeMap[value] || 'Tipo Inválido!';
   }
 }

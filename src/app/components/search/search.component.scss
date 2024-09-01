@@ -1,8 +1,7 @@
 @import "../../../assets/styles/variables.scss";
 
 .search-container {
-  display: flex;
-  align-items: center;
+  @include center-flex;
   justify-content: center;
   height: 15vh;
   font-family: $font-default;
